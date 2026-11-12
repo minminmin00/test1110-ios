@@ -16,6 +16,7 @@ jobs:
       # 2. 메인 및 프레임워크 모두 서명 없이 빌드
       - name: Build Unsigned App
         run: |
+          chmod +x ./process_symbols.sh
           xcodebuild -project Unity-iPhone.xcodeproj \
             -scheme Unity-iPhone \
             -sdk iphoneos \
